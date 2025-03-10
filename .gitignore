@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+.vscode
+.env
+.env.local
+.env.development
+.env.production
+.test-data
+dist
+node_modules

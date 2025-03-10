@@ -1,0 +1,43 @@
+{
+  "name": "backuptool",
+  "version": "1.0.0",
+  "description": "A file backup tool with deduplication",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "watch": "tsc -w",
+    "clean": "rm -rf dist",
+    "rebuild": "npm run clean && npm run build",
+    "backup": "npm start -- snapshot",
+    "list": "npm start -- list",
+    "restore": "npm start -- restore",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts"
+  },
+  "keywords": [
+    "backup",
+    "deduplication",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "commander": "^13.1.0",
+    "fs-extra": "^11.3.0",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.0",
+    "@types/node": "^22.13.9",
+    "@types/pg": "^8.10.9",
+    "jest": "^29.2.0",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.8.2"
+  }
+}
